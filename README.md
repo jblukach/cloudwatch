@@ -1,8 +1,8 @@
 # 📊 Centralized CloudWatch Observability
 
-Centralize Amazon CloudWatch Logs across multiple AWS accounts and regions to simplify observability, accelerate incident response, and enable global alerting.
+Centralize Amazon CloudWatch Logs across multiple AWS accounts and regions to simplify observability, accelerate incident response, and enable active region alerting.
 
-This repository documents a centralized observability setup based on the **Amazon CloudWatch Logs Centralization** feature. It complements an existing configuration that provides **global Lambda error alerting via SNS to Email**.
+This repository documents a centralized observability setup based on the **Amazon CloudWatch Logs Centralization** feature. It complements an existing configuration that provides **active region Lambda error alerting via SNS to Email**.
 
 ---
 
@@ -92,9 +92,9 @@ CloudWatch Logs Centralization eliminates these challenges by natively copying l
 
 ## ⚙️ Current Alerting Configuration
 
-This setup integrates with an existing global alerting pipeline:
+This setup integrates with an existing active region alerting pipeline:
 
-- **Global Lambda Error Monitoring**
+- **Active region Lambda Error Monitoring**
 - CloudWatch metric filters detect Lambda errors across all accounts
 - CloudWatch alarms trigger on aggregated error counts
 - Alarms publish to an **SNS topic**
@@ -139,7 +139,7 @@ With centralized logs, teams can:
 
 ## 🎯 Summary
 
-Centralized CloudWatch Observability provides a native, scalable foundation for monitoring AWS workloads at scale. By combining centralized logs with global Lambda error alerting via SNS and Email, teams gain faster visibility into issues and a more resilient operational posture.
+Centralized CloudWatch Observability provides a native, scalable foundation for monitoring AWS workloads at scale. By combining centralized logs with active region Lambda error alerting via SNS and Email, teams gain faster visibility into issues and a more resilient operational posture.
 
 ---
 
