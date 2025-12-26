@@ -36,7 +36,7 @@ class CloudwatchAlarmUse2(Stack):
             namespace = 'AWS/Lambda',
             metric_name = 'Errors',
             statistic = 'Sum',
-            period = Duration.minutes(1)
+            period = Duration.minutes(5)
         )
 
     ### ERRORS ALARM ###
