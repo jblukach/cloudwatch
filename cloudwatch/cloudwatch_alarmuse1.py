@@ -32,11 +32,8 @@ class CloudwatchAlarmUse1(Stack):
 
     ### ERRORS METRIC ###
 
-        errors = _cw.Metric(
-            namespace = 'AWS/Lambda',
-            metric_name = 'Errors',
-            statistic = 'Sum',
-            period = Duration.minutes(5)
+        errors = _cw.MathExpression(
+            expression = 'SELECT SUM(Errors) FROM SCHEMA("AWS/Lambda", FunctionName) GROUP BY FunctionName ORDER BY SUM() DESC'
         )
 
     ### ERRORS ALARM ###
